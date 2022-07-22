@@ -7,6 +7,5 @@ export const store = configureStore({
     [promotionsApi.reducerPath]: promotionsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware()
-      .concat(promotionsApi.middleware)
+    getDefaultMiddleware().concat(promotionsApi.middleware),
 });

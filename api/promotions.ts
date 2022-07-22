@@ -9,9 +9,9 @@ export const promotionsApi = createApi({
     getPromotions: builder.query<Promotion[], void>({
       query: () => 'api/promotions/',
       transformResponse: (response: { promotions: Promotion[] }, _meta, _arg) =>
-        response?.promotions ?? []
-    })
-  })
+        response?.promotions ?? [],
+    }),
+  }),
 });
 
 export const { useGetPromotionsQuery } = promotionsApi;
